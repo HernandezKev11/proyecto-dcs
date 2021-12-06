@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "text": "# Registro de solicitante",
+      "type": "text",
+      "id": "Field_0dznq9e"
+    },
+    {
+      "label": "Nombre",
+      "type": "textfield",
+      "id": "Field_0hm400d",
+      "key": "nombreUsuario",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Correo",
+      "type": "textfield",
+      "id": "Field_0l8pfz0",
+      "key": "correoUsuario",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "form3"
+}

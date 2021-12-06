@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "text": "# INGRESO DE AUTOMÓVIL",
+      "type": "text",
+      "id": "Field_1vb67un"
+    },
+    {
+      "values": [
+        {
+          "label": "Monoplaza",
+          "value": "monoplaza"
+        },
+        {
+          "label": "Sedan",
+          "value": "sedan"
+        },
+        {
+          "label": "Suburban mini",
+          "value": "suburbanmini"
+        },
+        {
+          "label": "Suburban plus",
+          "value": "suburbanplus"
+        },
+        {
+          "label": "Heavy Suburban",
+          "value": "suburbanheavy"
+        }
+      ],
+      "label": "Seleccione el tipo de auto",
+      "type": "radio",
+      "id": "Field_0qhc09k",
+      "key": "tipoAuto",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "form1"
+}

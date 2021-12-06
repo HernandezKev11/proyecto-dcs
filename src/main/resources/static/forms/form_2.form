@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "text": "# Text",
+      "type": "text",
+      "id": "Field_0e7pa4l"
+    }
+  ],
+  "type": "default",
+  "id": "form2"
+}

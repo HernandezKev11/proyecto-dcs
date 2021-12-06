@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "text": "# Seleccione el automóvil que desea comprar",
+      "type": "text",
+      "id": "Field_0a4s818"
+    },
+    {
+      "values": [
+        {
+          "label": "El monoplaza: un vehículo ultra pequeño y para 2 personas, con una independencia máxima de 100km, muy gustado por agencias de alquiler a nivel urbano y profesionales para desplazamientos en la GAM. El precio es $10mil.",
+          "value": "monoplaza"
+        },
+        {
+          "label": "Sedan: el clásico sedan. El precio es $25 mil",
+          "value": "sedan"
+        },
+        {
+          "label": "Suburvan mini: un SUV para máximo 5 personas de altas prestaciones y 4x2. El precio es $38mil",
+          "value": "suburbanmini"
+        },
+        {
+          "label": "Suburban plus: un SUV de 7 personas. 4x2. El precio es $45 mil",
+          "value": "suburbanplus"
+        },
+        {
+          "label": "Heavy Suburban: una versión 4x4 del suburban plus con muchas extras y capacidad de carga. El precio es $58 mil.",
+          "value": "suburbanheavy"
+        }
+      ],
+      "label": "Autos",
+      "type": "radio",
+      "id": "Field_0yqpgli",
+      "key": "autoSeleccionado"
+    }
+  ],
+  "type": "default",
+  "id": "Form_4"
+}

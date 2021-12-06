@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "type": "text",
+      "id": "Field_1t54hhq"
+    },
+    {
+      "text": "# Los autos SUBURBAN son subastados",
+      "type": "text",
+      "id": "Field_0zv0l25"
+    },
+    {
+      "type": "text",
+      "id": "Field_00ndibk"
+    },
+    {
+      "label": "Ingrese la cantidad de dinero que desea subastar (SUPERIOR O IGUAL AL PRECIO BASE)",
+      "type": "textfield",
+      "id": "Field_0a9jmn7",
+      "key": "dineroIngresado",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "form5"
+}
