@@ -2,9 +2,21 @@
   "schemaVersion": 2,
   "components": [
     {
-      "text": "# Text",
+      "text": "# Seleccione el usuario ganador",
       "type": "text",
       "id": "Field_0e7pa4l"
+    },
+    {
+      "values": [
+        {
+          "label": "Value",
+          "value": "value"
+        }
+      ],
+      "label": "Solicitantes",
+      "type": "radio",
+      "id": "Field_0zfyozp",
+      "key": "solisIguales"
     }
   ],
   "type": "default",

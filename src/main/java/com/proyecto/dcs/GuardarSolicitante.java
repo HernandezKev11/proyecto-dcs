@@ -1,33 +1,33 @@
 package com.proyecto.dcs;
 
-import com.proyecto.dcs.domain.Solicitante;
-import com.proyecto.dcs.services.SolicitanteServicesImpl;
+import com.proyecto.dcs.Solicitante.Solicitante;
+import com.proyecto.dcs.Solicitante.SolicitanteRepository;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.inject.Named;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Named
 public class GuardarSolicitante implements JavaDelegate {
 
 
-    SolicitanteServicesImpl servicio;
+    @Autowired
+    SolicitanteRepository soliRepo;
 
-    public GuardarSolicitante(){
-        servicio = new SolicitanteServicesImpl();
-    }
+
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
 
         String nombre = (String) delegateExecution.getVariable("nombreUsuario");
         String correo = (String) delegateExecution.getVariable("correoUsuario");
         String autoComprar = (String) delegateExecution.getVariable("autoSeleccionado");
-        int dineroPagar = (Integer) delegateExecution.getVariable("dineroIngresado");
+        String dineroPagar = (String) delegateExecution.getVariable("dineroIngresado");
 
-        Solicitante nuevoSoli = new Solicitante(nombre,correo,autoComprar,dineroPagar,"Pendiente");
-        System.out.println(nuevoSoli.toString());
-        servicio.save(nuevoSoli);
+        Solicitante nuevoSoli = new Solicitante(nombre,correo,autoComprar,dineroPagar,"Pendiente", LocalDateTime.now());
+        soliRepo.save(nuevoSoli);
 
 
     }

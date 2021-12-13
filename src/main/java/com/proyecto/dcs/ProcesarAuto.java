@@ -18,12 +18,15 @@ public class ProcesarAuto implements JavaDelegate {
 
             case "monoplaza":
                 subTipo = "otro";
+
                 break;
             case "sedan":
                 subTipo = "otro";
+                delegateExecution.setVariable("subTipo",subTipo);
+
                 break;
             case "suburbanmini":
-                subTipo = "serban";
+                subTipo = "suburban";
                 break;
 
             case "suburbanplus":
@@ -37,7 +40,7 @@ public class ProcesarAuto implements JavaDelegate {
         }
 
         delegateExecution.setVariable("subTipo",subTipo);
-        System.out.println("EL TIPO ES "+tipoAuto);
+        System.out.println("EL TIPO DE AUTO ENTRANDO ES "+tipoAuto);
 
 
 

@@ -21,15 +21,15 @@ public class ValidarSeleccion implements JavaDelegate {
             case "monoplaza":
                 subTipo = "otro";
                 cantidadDineroPagar = 10000;
-                delegateExecution.setVariable("dineroIngresado",cantidadDineroPagar);
+                delegateExecution.setVariable("dineroIngresado","10000");
                 break;
             case "sedan":
                 subTipo = "otro";
                 cantidadDineroPagar = 25000;
-                delegateExecution.setVariable("dineroIngresado",cantidadDineroPagar);
+                delegateExecution.setVariable("dineroIngresado","25000");
                 break;
             case "suburbanmini":
-                subTipo = "serban";
+                subTipo = "suburban";
                 cantidadDineroPagar = 38000;
                 break;
 

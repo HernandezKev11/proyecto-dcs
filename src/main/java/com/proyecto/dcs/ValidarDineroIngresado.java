@@ -12,16 +12,21 @@ public class ValidarDineroIngresado implements JavaDelegate {
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
 
-        int dineroIngresado = (Integer) delegateExecution.getVariable("dineroIngresado");
+        String dineroIngresado = (String) delegateExecution.getVariable("dineroIngresado");
         int dineroPagar = (Integer) delegateExecution.getVariable("dineroPagar");
 
-        if(dineroIngresado > dineroPagar){
+
+
+
+        if(Integer.parseInt(dineroIngresado) > dineroPagar){
             delegateExecution.setVariable("dineroCorrecto","true");
             System.out.println("El dinero ingresado para la subasta es correcto");
         }else{
             delegateExecution.setVariable("dineroCorrecto","false");
             System.out.println("El dinero ingresado de "+ dineroIngresado + " para la subasta es inferior a "+dineroPagar);
         }
+
+
     }
 
 }

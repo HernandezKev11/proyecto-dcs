@@ -19,7 +19,7 @@
     <bpmn:sequenceFlow id="Flow_09un04n" name="Tipo monoplaza o sedan" sourceRef="Gateway_1tssrtq" targetRef="Activity_1q5exwm">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{subTipo== "otro"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_03xz3jv" name="Tipo surban" sourceRef="Gateway_1tssrtq" targetRef="Activity_1ysera7">
+    <bpmn:sequenceFlow id="Flow_03xz3jv" name="Tipo Suburban" sourceRef="Gateway_1tssrtq" targetRef="Activity_1ysera7">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{subTipo== "suburban"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:exclusiveGateway id="Gateway_1m2i0on" name="Hay solicitante?">
@@ -69,10 +69,10 @@
       <bpmn:outgoing>Flow_1axfewh</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:sequenceFlow id="Flow_09g29x1" name="Sí" sourceRef="Gateway_13b391r" targetRef="Gateway_0ud19pg">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{solicitante== "false"}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{solicitante== "true"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_1axfewh" name="No" sourceRef="Gateway_13b391r" targetRef="EndEvent_0x6ir2l">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{solicitante== "true"}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{solicitante== "false"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:userTask id="say-hello" name="Se ingresa un  automóvil" camunda:formKey="camunda-forms:/forms/form_1.form">
       <bpmn:incoming>SequenceFlow_1fp17al</bpmn:incoming>
@@ -170,7 +170,7 @@
         <di:waypoint x="560" y="390" />
         <di:waypoint x="620" y="390" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="481" y="333" width="58" height="14" />
+          <dc:Bounds x="474" y="333" width="73" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_09un04n_di" bpmnElement="Flow_09un04n">
