@@ -27,7 +27,6 @@ public class BuscarPrimerSolicitante implements JavaDelegate {
             if(listaOficial.get(i).getEstadoSolicitud().equals("Pendiente") && listaOficial.get(i).getAutoBuscado().equals(delegateExecution.getVariable("tipoAuto")) ){
 
                 soliEncontrado = listaOficial.get(i);
-                System.out.println(soliEncontrado.getEstadoSolicitud());
                 break;
             }
         }

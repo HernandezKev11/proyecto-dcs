@@ -40,6 +40,7 @@ public class ProcesarAuto implements JavaDelegate {
         }
 
         delegateExecution.setVariable("subTipo",subTipo);
+        System.out.println("-------------------------------------");
         System.out.println("EL TIPO DE AUTO ENTRANDO ES "+tipoAuto);
 
 

@@ -26,6 +26,8 @@ public class BuscarMejorPostor implements JavaDelegate {
 
         List<Solicitante> solicitanteList = soliRepo.findAll();
 
+
+
         List<Solicitante> solisApostando = new ArrayList<>();
 
         for(int i =0; i < solicitanteList.size();i++){
@@ -62,7 +64,8 @@ public class BuscarMejorPostor implements JavaDelegate {
             if(soliIgual != null){
                 delegateExecution.setVariable("solicitante","true");
                 delegateExecution.setVariable("postoresIguales","true");
-                delegateExecution.setVariable("solisIguales",soliMayor.getCorreo()+" / "+soliMayor.getFechaSolicitud());
+                delegateExecution.setVariable("postorUno",soliMayor.getId());
+                delegateExecution.setVariable("postorDos",soliIgual.getId());
                 System.out.println("Se encontraron 2 solicitantes apostando con la misma cantidad");
             }else{
                 delegateExecution.setVariable("solicitante","true");
@@ -70,6 +73,8 @@ public class BuscarMejorPostor implements JavaDelegate {
                 delegateExecution.setVariable("idSolicitante",soliMayor.getId());
 
                 System.out.println("Se encontro solicitante");
+
+
             }
         }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_0fr9mxs" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.11.1">
-  <bpmn:process id="proyecto-dcs-process" isExecutable="true">
+  <bpmn:process id="ingresoAuto" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1">
       <bpmn:outgoing>SequenceFlow_1fp17al</bpmn:outgoing>
     </bpmn:startEvent>
@@ -53,10 +53,6 @@
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{postoresIguales== "true"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_19vc0qm" sourceRef="Activity_0y4xnpx" targetRef="Activity_01pntx0" />
-    <bpmn:userTask id="Activity_0y4xnpx" name="Se elige el postor ganador" camunda:formKey="camunda-forms:/forms/form_2.form">
-      <bpmn:incoming>Flow_1vr11u2</bpmn:incoming>
-      <bpmn:outgoing>Flow_19vc0qm</bpmn:outgoing>
-    </bpmn:userTask>
     <bpmn:serviceTask id="Activity_01pntx0" name="Asignar automóvil a solicitante" camunda:delegateExpression="#{asignarAuto}">
       <bpmn:incoming>Flow_0crijai</bpmn:incoming>
       <bpmn:incoming>Flow_019w9n9</bpmn:incoming>
@@ -91,9 +87,13 @@
       <bpmn:incoming>Flow_03xz3jv</bpmn:incoming>
       <bpmn:outgoing>Flow_08juib1</bpmn:outgoing>
     </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_0y4xnpx" name="Se elige el postor ganador" camunda:delegateExpression="#{seleccionarPrimerPostor}">
+      <bpmn:incoming>Flow_1vr11u2</bpmn:incoming>
+      <bpmn:outgoing>Flow_19vc0qm</bpmn:outgoing>
+    </bpmn:serviceTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
-    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="proyecto-dcs-process">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="ingresoAuto">
       <bpmndi:BPMNEdge id="Flow_1ugfs54_di" bpmnElement="Flow_1ugfs54">
         <di:waypoint x="490" y="267" />
         <di:waypoint x="535" y="267" />
@@ -216,9 +216,6 @@
           <dc:Bounds x="959" y="363" width="81" height="53" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_18jkaj0_di" bpmnElement="Activity_0y4xnpx">
-        <dc:Bounds x="1000" y="440" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_06jjb8s_di" bpmnElement="Activity_01pntx0">
         <dc:Bounds x="990" y="230" width="100" height="80" />
       </bpmndi:BPMNShape>
@@ -239,6 +236,9 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1n7terf_di" bpmnElement="Activity_1ysera7">
         <dc:Bounds x="620" y="350" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0kfn6ht_di" bpmnElement="Activity_0y4xnpx">
+        <dc:Bounds x="1000" y="440" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

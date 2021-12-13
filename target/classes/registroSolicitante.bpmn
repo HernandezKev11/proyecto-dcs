@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_02p7vlk" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.11.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0">
-  <bpmn:process id="Process_0olq1wm" isExecutable="true">
+  <bpmn:process id="registroSolicitante" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1">
       <bpmn:outgoing>Flow_1x7smkh</bpmn:outgoing>
     </bpmn:startEvent>
@@ -25,7 +25,7 @@
       <bpmn:incoming>Flow_1imjuky</bpmn:incoming>
       <bpmn:outgoing>Flow_06gl3af</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:exclusiveGateway id="Gateway_1ibahuz" name="La cantidad de dinero ingresado es correcto?">
+    <bpmn:exclusiveGateway id="Gateway_1ibahuz" name="¿La cantidad de dinero ingresado es correcto?">
       <bpmn:incoming>Flow_1h676j3</bpmn:incoming>
       <bpmn:outgoing>Flow_16r5zp6</bpmn:outgoing>
       <bpmn:outgoing>Flow_08abzhh</bpmn:outgoing>
@@ -42,7 +42,7 @@
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_06gl3af" sourceRef="Activity_1vgx8mb" targetRef="Event_0l0zuk9" />
     <bpmn:sequenceFlow id="Flow_1rcsqp4" sourceRef="Activity_0jxdesx" targetRef="Gateway_0frz0pg" />
-    <bpmn:exclusiveGateway id="Gateway_0frz0pg" name="Es suburban?">
+    <bpmn:exclusiveGateway id="Gateway_0frz0pg" name="¿Es suburban?">
       <bpmn:incoming>Flow_1rcsqp4</bpmn:incoming>
       <bpmn:outgoing>Flow_1dx0xia</bpmn:outgoing>
       <bpmn:outgoing>Flow_1imjuky</bpmn:outgoing>
@@ -64,7 +64,7 @@
     </bpmn:serviceTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
-    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_0olq1wm">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="registroSolicitante">
       <bpmndi:BPMNEdge id="Flow_1h676j3_di" bpmnElement="Flow_1h676j3">
         <di:waypoint x="1030" y="177" />
         <di:waypoint x="1075" y="177" />
@@ -152,7 +152,7 @@
       <bpmndi:BPMNShape id="Gateway_0frz0pg_di" bpmnElement="Gateway_0frz0pg" isMarkerVisible="true">
         <dc:Bounds x="695" y="152" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="685" y="123" width="69" height="14" />
+          <dc:Bounds x="682" y="123" width="75" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1oc8fkh_di" bpmnElement="Activity_0jxdesx">
